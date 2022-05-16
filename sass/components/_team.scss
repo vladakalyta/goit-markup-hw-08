@@ -1,0 +1,122 @@
+.team-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $bg-team-section;
+
+  @media screen and (min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.team-members {
+  @media screen and (min-width:768px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+    @media screen and (min-width:1200px) {
+      flex-wrap: nowrap;
+    }
+
+}
+
+.team-member {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background: $color-light;
+  width: 100%;
+  height: auto;
+
+  @media screen and (min-width:480px) and (max-width:768px) {
+    width: 450px;
+    min-height: 622px;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+  }
+
+  @media screen and (min-width:768px) and (max-width:1200px) {
+    width: 354px;
+    min-height: 536px;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+  
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+    
+  }
+  @media screen and (min-width:1200px) {
+    width: 270px;
+    min-height: 368px;
+    &:not(:last-child) {
+        margin-right: 30px;
+      }
+  }
+  
+
+  &__img {
+    display: block;
+  }
+
+  &__name-position {
+    padding-top: 30px;
+    padding-bottom: 16px;
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $color-primary-title;
+  }
+
+  &__position {
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $color-primary-text;
+  }
+}
+
+.team-socials {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.team-socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  color: #afb1b8;
+  border-radius: 50%;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-radius: 50%;
+    background-color: $color-accent;
+    color: $color-light;
+  }
+}
+
+.team-socials__icon {
+  fill: currentColor;
+}
+
