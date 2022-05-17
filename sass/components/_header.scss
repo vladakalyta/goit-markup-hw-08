@@ -17,6 +17,7 @@
 
   &-header {
     margin-right: 95px;
+    display: inline-block;
   }
 
   &-footer {
@@ -24,21 +25,153 @@
   }
 }
 
-.header-position {
-  @media screen and (min-width:768px) {
-      display: flex;
+.menu-button {
+  background-color: transparent;
+  border: none;
+  z-index: 3;
+  fill: #212121;
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 
+  &:hover,
+  &:focus {
+    fill: $color-accent;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 48px 40px;
+  z-index: 2;
+
+  background: #fff;
+
+  &.is-open {
+    display: block;
+  }
+}
+.mobmenu-thumb {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+// MOBILE MENU
+.mob-nav {
+  :not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-nav__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1, 175;
+  letter-spacing: 0.02em;
+  color: #212121;
+
+  &.mob-current {
+    color: $color-accent;
+  }
+}
+
+.mob-contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-contacts__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.176;
+  letter-spacing: 0.02em;
+  color: $color-accent;
+}
+
+.mob-contacts__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.02em;
+  color: $color-primary-text;
+}
+
+.mob-socials {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 64px;
+  @media screen and (min-width: 480px) {
+    width: 356px;
+  }
+}
+.mob-socials__item {
+  &:not(:last-child) {
+    padding-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}
+.mob-socials__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: $color-accent;
+}
+
+// END MOB MENU
+
+.header-position {
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.navigation {
+  @media screen and (max-width: 768px) {
+    display: inline-block;
+  }
 }
 
 .header-section {
+  // position: relative;
   background-color: $color-light;
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .navigation,
 .site-nav {
-  @media screen and (min-width:768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
   }
@@ -47,13 +180,17 @@
 .site-nav,
 .contacts,
 .navigation {
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
   }
-
 }
-
+.site-nav,
+.contacts {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
 .site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -92,24 +229,23 @@
 
 .contacts {
   margin-left: auto;
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width: 1200px) {
     margin-top: auto;
     margin-bottom: auto;
   }
-    }
+}
 
 .contact {
-  @media screen and (max-width:1200px) {
+  @media screen and (max-width: 1200px) {
     &:first-child {
       margin-bottom: 10px;
     }
   }
 }
 .contact:last-child {
-  @media screen and (min-width:1200px) {
-      margin-left: 50px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
   }
-
 }
 
 .contact__info {
@@ -125,18 +261,18 @@
   &:focus {
     color: $color-accent;
   }
-    @media screen and (max-width:1200px) {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      font-size: 12px;
-      line-height: 1.16;
-    }
-    @media screen and (min-width:1200px) {
-      padding-top: 32px;
-      padding-bottom: 32px;
-      font-size: 14px;
-      line-height: 1.14;
-    }
+  @media screen and (max-width: 1200px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.16;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .contact__icon {
