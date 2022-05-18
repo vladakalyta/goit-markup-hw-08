@@ -449,37 +449,37 @@ body {
 
 @media screen and (max-width: 767px) {
   .hero {
-    background-image: url(../../images/mobile/bg-hero-mob.jpg);
+    background-image: url(../images/mobile/bg-hero-mob.jpg);
   }
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../../images/mobile/bg-hero-mob-x2.jpg);
+    background-image: url(../images/mobile/bg-hero-mob-x2.jpg);
   }
 }
 
 @media screen and (max-width: 1199px) {
   .hero {
-    background-image: url(../../images/tablet/bg-hero-tab.jpg);
+    background-image: url(../images/tablet/bg-hero-tab.jpg);
   }
 }
 
 @media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../../images/tablet/bg-hero-tab-x2.jpg);
+    background-image: url(../images/tablet/bg-hero-tab-x2.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: url(../../images/bg-hero.jpg);
+    background-image: url(../images/bg-hero.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../../images/bg-hero-x2.jpg);
+    background-image: url(../images/bg-hero-x2.jpg);
   }
 }
 

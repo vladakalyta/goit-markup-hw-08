@@ -25,27 +25,27 @@
   }
 
   @media screen and (max-width: 767px) {
-    background-image: url(../../images/mobile/bg-hero-mob.jpg);
+    background-image: url(../images/mobile/bg-hero-mob.jpg);
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../../images/mobile/bg-hero-mob-x2.jpg);
+      background-image: url(../images/mobile/bg-hero-mob-x2.jpg);
     }
   }
   @media screen and (max-width: 1199px) {
-    background-image: url(../../images/tablet/bg-hero-tab.jpg);
+    background-image: url(../images/tablet/bg-hero-tab.jpg);
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../../images/tablet/bg-hero-tab-x2.jpg);
+      background-image: url(../images/tablet/bg-hero-tab-x2.jpg);
     }
   }
   @media screen and (min-width: 1200px) {
-    background-image: url(../../images/bg-hero.jpg);
+    background-image: url(../images/bg-hero.jpg);
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../../images/bg-hero-x2.jpg);
+      background-image: url(../images/bg-hero-x2.jpg);
     }
   }
 }
