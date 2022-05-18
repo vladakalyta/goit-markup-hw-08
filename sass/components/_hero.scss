@@ -3,29 +3,51 @@
   padding-bottom: 118px;
   margin-right: auto;
   margin-left: auto;
+  background-color: rgba(47, 48, 58, 0.4);
+  background-image: url(../images/bg-hero.jpg);
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  background-image: linear-gradient(to top,
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)),
-    url(../images/bg-hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    height: 400px;
+    max-width: 480px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 400px;
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+    max-width: 1600px;
+  }
 
-    @media screen and (min-width:480px) and (max-width:767px){
-      height: 400px;
-      max-width: 480px;
+  @media screen and (max-width: 767px) {
+    background-image: url(../../images/mobile/bg-hero-mob.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/mobile/bg-hero-mob-x2.jpg);
     }
-
-    @media screen and (min-width:768px) and (max-width:1199px) {
-      height: 400px;
-      width: 768px;
+  }
+  @media screen and (max-width: 1199px) {
+    background-image: url(../../images/tablet/bg-hero-tab.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/tablet/bg-hero-tab-x2.jpg);
     }
-    @media screen and (min-width:1200px) {
-      padding-top: 200px;
-      padding-bottom: 200px;
-      height: 600px;
-      max-width: 1600px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: url(../../images/bg-hero.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../../images/bg-hero-x2.jpg);
     }
+  }
 }
 
 .hero__title {
@@ -40,7 +62,7 @@
   text-transform: uppercase;
   color: $color-light;
 
-  @media screen and (min-width:1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;
   }

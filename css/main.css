@@ -33,6 +33,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Roboto, sans-serif;
   color: #757575;
@@ -411,8 +417,9 @@ body {
   padding-bottom: 118px;
   margin-right: auto;
   margin-left: auto;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/bg-hero.jpg);
-  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg-hero.jpg);
+  background-color: rgba(47, 48, 58, 0.4);
+  background-image: url(../images/bg-hero.jpg);
+  background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -437,6 +444,42 @@ body {
     padding-bottom: 200px;
     height: 600px;
     max-width: 1600px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: url(../../images/mobile/bg-hero-mob.jpg);
+  }
+}
+
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/mobile/bg-hero-mob-x2.jpg);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .hero {
+    background-image: url(../../images/tablet/bg-hero-tab.jpg);
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1199px) and (min-resolution: 192dpi), screen and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/tablet/bg-hero-tab-x2.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: url(../../images/bg-hero.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../../images/bg-hero-x2.jpg);
   }
 }
 
