@@ -32,6 +32,8 @@
   fill: #212121;
   @media screen and (max-width: 768px) {
     display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   @media screen and (min-width: 768px) {
     display: none;
@@ -164,9 +166,8 @@
 }
 
 .header-section {
-  // position: relative;
   background-color: $color-light;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid #ececec;
 }
 
 .navigation,
